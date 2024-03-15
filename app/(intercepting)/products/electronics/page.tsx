@@ -9,9 +9,10 @@ const Page = () => {
       title="Electronics"
       path="app/(intercepting)/products/electronics/page.tsx"
       url="/products/electronics"
+      data={data}
     >
       <div className="flex flex-col gap-3">
-        <div className="flex flex-wrap gap-6 gap-y-3">
+        <div className="flex flex-wrap gap-6 gap-y-1">
           <LinkWithIcon
             title="點擊連結前往攔截的 Phones 頁面 - (.)"
             path="/products/electronics/phones"
@@ -21,7 +22,7 @@ const Page = () => {
             path="/products/electronics/computers"
           />
         </div>
-        <div className="flex flex-wrap gap-6 gap-y-3">
+        <div className="flex flex-wrap gap-6 gap-y-1">
           <Link href="/products" className="underline-offset-2 underline">
             回到 Products Page
           </Link>
@@ -33,5 +34,25 @@ const Page = () => {
     </PageCard>
   );
 };
+
+const data = [
+  {
+    title: "electronics",
+    children: [
+      {
+        title: "phones",
+        isFolder: true,
+      },
+      {
+        title: "(.)phones",
+        isFolder: true,
+      },
+      {
+        title: "computers",
+        isFolder: true,
+      },
+    ],
+  },
+];
 
 export default Page;

@@ -13,7 +13,7 @@ const Page = () => {
       data={data}
     >
       <div className="flex flex-col gap-1">
-        <div className="flex gap-6 flex-wrap gap-y-2">
+        <div className="flex gap-6 flex-wrap gap-y-1">
           <LinkWithIcon
             title="Go to clothing 體驗 (..)"
             path="/products/clothing"

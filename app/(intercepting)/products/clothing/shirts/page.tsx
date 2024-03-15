@@ -1,7 +1,7 @@
-import LinkWithIcon from "@/components/LinkWIthIcon/page";
-import PageCard from "@/components/PageCard";
 import Link from "next/link";
 import React from "react";
+import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import PageCard from "@/components/PageCard";
 
 const Page = () => {
   return (
@@ -9,6 +9,7 @@ const Page = () => {
       title="Shirts"
       path="app/(intercepting)/products/clothing/shirts/page.tsx"
       url="/products/clothing/shirts"
+      data={data}
     >
       <div className="flex flex-col gap-3">
         <LinkWithIcon
@@ -30,5 +31,20 @@ const Page = () => {
     </PageCard>
   );
 };
+
+const data = [
+  {
+    title: "shirts",
+    children: [
+      {
+        title: "(..)dresses",
+        isFolder: true,
+      },
+      {
+        title: "page.tsx",
+      },
+    ],
+  },
+];
 
 export default Page;

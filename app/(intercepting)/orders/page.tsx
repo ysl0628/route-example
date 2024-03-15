@@ -15,7 +15,7 @@ const Page = () => {
           或是在 (...)orders 中重新整理頁面
         </div>
         <Link href="/products" className="underline-offset-2 underline">
-          回到 Products
+          回到 Products Page
         </Link>
       </div>
     </PageCard>
