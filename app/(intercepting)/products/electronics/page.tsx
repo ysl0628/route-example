@@ -1,7 +1,7 @@
-import LinkWithIcon from '@/components/LinkWIthIcon/page'
-import PageCard from '@/components/PageCard'
-import Link from 'next/link'
-import React from 'react'
+import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import PageCard from "@/components/PageCard";
+import Link from "next/link";
+import React from "react";
 
 const Page = () => {
   return (
@@ -10,12 +10,24 @@ const Page = () => {
       path="app/(intercepting)/products/electronics/page.tsx"
       url="/products/electronics"
     >
-      <LinkWithIcon title="Go to phones" path="/products/electronics/phones" />
-      <p className="dark:text-gray-400 text-gray-800">
-        點擊連結前往攔截的 Phones 頁面
-      </p>
-    </PageCard>
-  )
-}
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-wrap gap-6 gap-y-3">
+          <LinkWithIcon
+            title="點擊連結前往攔截的 Phones 頁面"
+            path="/products/electronics/phones"
+          />
+          <LinkWithIcon
+            title="Go to computers"
+            path="/products/electronics/computers"
+          />
+        </div>
 
-export default Page
+        <Link href="/products" className="underline-offset-2 underline">
+          回到 Products
+        </Link>
+      </div>
+    </PageCard>
+  );
+};
+
+export default Page;

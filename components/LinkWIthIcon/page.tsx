@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 type LinkWithIconProps = {
-  title: string
-  path: string
-}
+  title: string;
+  path: string;
+};
 
 const LinkWithIcon = ({ title, path }: LinkWithIconProps) => {
   return (
@@ -21,14 +21,14 @@ const LinkWithIcon = ({ title, path }: LinkWithIconProps) => {
       >
         <path
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M1 5h12m0 0L9 1m4 4L9 9"
         />
       </svg>
     </Link>
-  )
-}
+  );
+};
 
-export default LinkWithIcon
+export default LinkWithIcon;
