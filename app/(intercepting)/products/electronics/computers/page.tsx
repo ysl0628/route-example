@@ -10,13 +10,14 @@ const Page = () => {
       url="/products/electronics/computers"
     >
       <div className="flex flex-col gap-3">
-        <Link href="/products/foods" className="underline-offset-2 underline">
-          Go to intercepting Foods page
-        </Link>
-        {/* <LinkWithIcon
-          title="點擊連結前往攔截的 Foods 頁面"
+        <LinkWithIcon
+          title="點擊連結前往攔截的 Foods 頁面 - (..)(..) 目前有 bug"
           path="/products/foods"
-        /> */}
+        />
+        <LinkWithIcon
+          title="點擊連結前往攔截的 Orders 頁面 - (...)"
+          path="/orders"
+        />
         <div className="flex flex-wrap gap-6">
           <Link
             href="/products/electronics"

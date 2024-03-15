@@ -11,7 +11,10 @@ const Page = () => {
       url="/products/clothing"
     >
       <div className="flex flex-wrap gap-6 gap-y-3">
-        <LinkWithIcon title="Go to shirts" path="/products/clothing/shirts" />
+        <LinkWithIcon
+          title="Go to shirts 體驗 (..)"
+          path="/products/clothing/shirts"
+        />
       </div>
     </PageCard>
   );

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Button from "@/components/Button";
 import PageCard from "@/components/PageCard";
+import Link from "next/link";
 
 const Page = () => {
   const router = useRouter();
@@ -28,6 +29,20 @@ const Page = () => {
             label="重新整理頁面(前往原始 Dresses Page)"
             action={refreshPage}
           />
+        </div>
+        <div className="flex gap-3 flex-wrap">
+          <Link href="/" className="underline-offset-2 underline">
+            回到首頁
+          </Link>
+          <Link href="/products" className="underline-offset-2 underline">
+            回到 Products Page
+          </Link>
+          <Link
+            href="/products/clothing"
+            className="underline-offset-2 underline"
+          >
+            回到 Clothing Page
+          </Link>
         </div>
       </div>
     </PageCard>
