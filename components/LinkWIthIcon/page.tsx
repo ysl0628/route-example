@@ -1,9 +1,10 @@
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 
 type LinkWithIconProps = {
   title: string;
   path: string;
-};
+} & React.AnchorHTMLAttributes<HTMLAnchorElement> &
+  Partial<LinkProps>;
 
 const LinkWithIcon = ({ title, path, ...props }: LinkWithIconProps) => {
   return (
