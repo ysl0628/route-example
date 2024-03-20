@@ -1,4 +1,4 @@
-import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import LinkWithIcon from "@/components/LinkWIthIcon";
 import PageCard from "@/components/PageCard";
 import Link from "next/link";
 import React from "react";

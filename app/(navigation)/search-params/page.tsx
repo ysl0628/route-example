@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 import Link from "next/link";
 import PageCard from "@/components/PageCard";
-import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import LinkWithIcon from "@/components/LinkWIthIcon";
 
 const Page = () => {
   const searchParams = useSearchParams();

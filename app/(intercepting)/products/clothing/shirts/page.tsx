@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import LinkWithIcon from "@/components/LinkWIthIcon";
 import PageCard from "@/components/PageCard";
 
 const Page = () => {

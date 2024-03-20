@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 
 import Link from "next/link";
 import PageCard from "@/components/PageCard";
-import LinkWithIcon from "@/components/LinkWIthIcon/page";
+import LinkWithIcon from "@/components/LinkWIthIcon";
 import Button from "@/components/Button";
 import axios from "axios";
 

@@ -32,6 +32,12 @@ export default function Layout({ children }: Props) {
             >
               前往 useSearchParams page
             </Link>
+            <Link
+              href="/redirect"
+              className="underline-offset-2 underline font-medium text-rose-500"
+            >
+              前往 redirect page
+            </Link>
           </div>
           <div className="flex flex-col w-[660px] gap-6">{children}</div>
         </LayoutCard>
