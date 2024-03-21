@@ -16,7 +16,7 @@ const Page = async () => {
 
   return (
     <PageCard
-      title="force-cache"
+      title="Data Fetching - force-cache"
       path="app/(fetch)/data-fetching/page.tsx"
       url="/data-fetching"
       description="重新整理頁面會因為 force cache 所以毫秒數不會改變"
