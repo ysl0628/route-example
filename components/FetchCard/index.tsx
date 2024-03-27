@@ -3,11 +3,18 @@ import React from 'react'
 type Props = {
   title: string
   data: number | string
+  focus?: boolean
 }
 
-const FetchCard = ({ title, data }: Props) => {
+const FetchCard = ({ title, data, focus }: Props) => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md w-1/3 border-2 border-green-300 dark:border-green-500">
+    <div
+      className={`bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md w-1/3 border-2 ${
+        focus
+          ? 'border-rose-300 dark:border-rose-500'
+          : 'border-green-300 dark:border-green-500'
+      }`}
+    >
       <div className="flex flex-col items-start justify-between">
         <div>
           <p className="text-md font-semibold text-gray-600 dark:text-gray-300">
