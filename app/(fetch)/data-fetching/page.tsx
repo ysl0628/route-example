@@ -5,11 +5,19 @@ import LinkWithIcon from '@/components/LinkWIthIcon'
 
 import { FETCHING_ENDPOINT_URL } from '@/config'
 
+console.log('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
 const getData = async () => {
-  console.log('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
-
   try {
-    const res = await fetch(`${FETCHING_ENDPOINT_URL}`)
+    const res = await fetch(FETCHING_ENDPOINT_URL)
+    if (!res.ok) {
+      throw new Error('Failed to fetch data')
+    }
+
+    const contentType = res.headers.get('Content-Type')
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Invalid content type, expected application/json')
+    }
+
     const { data } = await res.json()
     return data
   } catch (error) {
