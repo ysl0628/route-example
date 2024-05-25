@@ -12,12 +12,16 @@ const getData = async ({
   cache?: RequestCache | undefined
   revalidate?: number | false | undefined
 }) => {
-  const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, {
-    cache,
-    next: { revalidate }
-  })
-  const { data } = await res.json()
-  return data
+  try {
+    const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, {
+      cache,
+      next: { revalidate }
+    })
+    const { data } = await res.json()
+    return data
+  } catch (error) {
+    console.error('error', error)
+  }
 }
 
 const Page = async () => {

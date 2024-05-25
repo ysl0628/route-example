@@ -6,9 +6,14 @@ import LinkWithIcon from '@/components/LinkWIthIcon'
 import { API_ENDPOINT } from '@/config'
 
 const getData = async ({ cache }: { cache?: RequestCache | undefined }) => {
-  const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, { cache })
-  const { data } = await res.json()
-  return data
+  try {
+    const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, { cache })
+
+    const { data } = await res.json()
+    return data
+  } catch (error) {
+    console.error('error', error)
+  }
 }
 
 const Page = async () => {
