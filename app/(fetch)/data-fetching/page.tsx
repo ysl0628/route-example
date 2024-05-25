@@ -7,25 +7,20 @@ import { FETCHING_ENDPOINT_URL } from '@/config'
 
 const getData = async () => {
   try {
-    console.log('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
-
     const res = await fetch(FETCHING_ENDPOINT_URL)
-    // console.log(res)
 
-    throw new Error('Failed to fetch data' + JSON.stringify(await res.json()))
-    // if (!res.ok) {
-    //   throw new Error('Failed to fetch data')
-    // }
+    if (!res.ok) {
+      throw new Error('Failed to fetch data')
+    }
 
-    // const contentType = res.headers.get('Content-Type')
-    // if (!contentType || !contentType.includes('application/json')) {
-    //   throw new Error('Invalid content type, expected application/json')
-    // }
+    const contentType = res.headers.get('Content-Type')
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Invalid content type, expected application/json')
+    }
 
-    // const data = await res.body
-    // console.log('data', res)
+    const data = await res.body
 
-    // return data
+    return data
   } catch (error) {
     console.log('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
     console.error('error', error)

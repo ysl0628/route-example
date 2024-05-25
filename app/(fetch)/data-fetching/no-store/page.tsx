@@ -41,7 +41,7 @@ const Page = async () => {
           />
           <LinkWithIcon
             title="前往 Revalidation (重新驗證)"
-            path="/revalidation"
+            path="/data-fetching/revalidation"
           />
         </div>
         <div className="flex gap-5">
