@@ -6,6 +6,8 @@ import LinkWithIcon from '@/components/LinkWIthIcon'
 import { FETCHING_ENDPOINT_URL } from '@/config'
 
 const getData = async () => {
+  console.log('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
+
   try {
     const res = await fetch(`${FETCHING_ENDPOINT_URL}`)
     const { data } = await res.json()
