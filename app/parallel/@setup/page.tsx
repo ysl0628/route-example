@@ -1,5 +1,3 @@
-"use client";
-
 import PageCard from "@/components/PageCard";
 import React, { Suspense, useEffect, useState } from "react";
 
