@@ -1,7 +1,7 @@
-import LinkWithIcon from "@/components/LinkWIthIcon";
-import PageCard from "@/components/PageCard";
-import Link from "next/link";
-import React from "react";
+import LinkWithIcon from '@/components/LinkWIthIcon'
+import PageCard from '@/components/PageCard'
+import Link from 'next/link'
+import React from 'react'
 
 const MyButton = React.forwardRef<
   HTMLAnchorElement,
@@ -16,8 +16,10 @@ const MyButton = React.forwardRef<
     >
       Custom a tag component in Link (使用 passHref 和 legacyBehavior 屬性)
     </a>
-  );
-});
+  )
+})
+
+MyButton.displayName = 'MyButton' // Add display name
 
 const Page = () => {
   return (
@@ -41,7 +43,7 @@ const Page = () => {
         </div>
       </div>
     </PageCard>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
