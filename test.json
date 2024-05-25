@@ -1,0 +1,30 @@
+{
+  "AutoScalingGroupName": "my-asg",
+  "DesiredCapacityType": "units",
+  "MixedInstancesPolicy": {
+    "LaunchTemplate": {
+      "LaunchTemplateSpecification": {
+        "LaunchTemplateName": "my-launch-template",
+        "Version": "$Default"
+      },
+      "Overrides": [
+        {
+          "InstanceRequirements": {
+            "VCpuCount": { "Min": 4, "Max": 8 },
+            "MemoryMiB": { "Min": 16384 },
+            "CpuManufacturers": ["intel"]
+          }
+        }
+      ]
+    },
+    "InstancesDistribution": {
+      "OnDemandPercentageAboveBaseCapacity": 50,
+      "SpotAllocationStrategy": "price-capacity-optimized"
+    }
+  },
+  "MinSize": 0,
+  "MaxSize": 100,
+  "DesiredCapacity": 4,
+  "DesiredCapacityType": "units",
+  "VPCZoneIdentifier": "subnet-5ea0c127,subnet-6194ea3b,subnet-c934b782"
+}
