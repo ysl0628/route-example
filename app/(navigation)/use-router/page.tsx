@@ -1,22 +1,24 @@
-"use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+'use client'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
-import Link from "next/link";
-import PageCard from "@/components/PageCard";
-import Button from "@/components/Button";
+import Link from 'next/link'
+import PageCard from '@/components/PageCard'
+import Button from '@/components/Button'
+
+// TODO: 新增 server data 的呈現，要將這個 component 改成 server component
 
 const Page = () => {
-  const router = useRouter();
-  const [inputValue, setInputValue] = useState("");
+  const router = useRouter()
+  const [inputValue, setInputValue] = useState('')
 
   const handleRefresh = () => {
-    router.refresh();
-  };
+    router.refresh()
+  }
 
   const handleChanges = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
+    setInputValue(e.target.value)
+  }
 
   return (
     <PageCard
@@ -55,7 +57,7 @@ const Page = () => {
         </div>
       </div>
     </PageCard>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
