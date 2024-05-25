@@ -21,6 +21,7 @@ const getData = async ({
     return data
   } catch (error) {
     console.error('error', error)
+    console.error('FETCHING_ENDPOINT_URL', FETCHING_ENDPOINT_URL)
   }
 }
 
