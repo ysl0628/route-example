@@ -18,7 +18,7 @@ const getData = async () => {
       throw new Error('Invalid content type, expected application/json')
     }
 
-    const data = await res.body
+    const { data } = await res.json()
 
     return data
   } catch (error) {
@@ -38,7 +38,7 @@ const Page = async () => {
       description="重新整理頁面會因為 force cache 所以毫秒數不會改變"
     >
       <div className="flex flex-col gap-4">
-        {/* <FetchCard title="Fetch 的毫秒數" data={data} /> */}
+        <FetchCard title="Fetch 的毫秒數" data={data} />
         <div className="flex flex-wrap gap-4">
           <LinkWithIcon
             title="前往 no-store (無快取)"
