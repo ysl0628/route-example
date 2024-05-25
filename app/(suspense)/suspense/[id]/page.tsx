@@ -30,8 +30,8 @@ const getAlbums = async ({
   return albums
 }
 
-const Page = async ({ id }: { id: string }) => {
-  const username = await getArtists({ id })
+const Page = async ({ params }: { params: { id: string } }) => {
+  const username = await getArtists({ id: params.id })
   const albums = await getAlbums({ username })
 
   return (
