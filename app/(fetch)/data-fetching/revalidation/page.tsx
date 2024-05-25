@@ -3,7 +3,7 @@ import PageCard from '@/components/PageCard'
 import FetchCard from '@/components/FetchCard'
 import LinkWithIcon from '@/components/LinkWIthIcon'
 
-import { API_ENDPOINT } from '@/config'
+import { FETCHING_ENDPOINT_URL } from '@/config'
 
 const getData = async ({
   cache,
@@ -13,7 +13,7 @@ const getData = async ({
   revalidate?: number | false | undefined
 }) => {
   try {
-    const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, {
+    const res = await fetch(`${FETCHING_ENDPOINT_URL}`, {
       cache,
       next: { revalidate }
     })

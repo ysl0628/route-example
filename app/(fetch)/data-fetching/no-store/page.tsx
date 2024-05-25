@@ -3,11 +3,13 @@ import PageCard from '@/components/PageCard'
 import FetchCard from '@/components/FetchCard'
 import LinkWithIcon from '@/components/LinkWIthIcon'
 
-import { API_ENDPOINT } from '@/config'
+import { FETCHING_ENDPOINT_URL } from '@/config'
 
 const getData = async ({ cache }: { cache?: RequestCache | undefined }) => {
   try {
-    const res = await fetch(`${API_ENDPOINT}/api/data-fetching`, { cache })
+    const res = await fetch(`${FETCHING_ENDPOINT_URL}`, {
+      cache
+    })
 
     const { data } = await res.json()
     return data
